@@ -27,7 +27,7 @@ class Transaction {
   @Column()
   category_id: string;
 
-  @ManyToOne(() => Category)
+  @ManyToOne(() => Category) // uma categoria pra muitas transações
   @JoinColumn({ name: 'category_id' }) // qual coluna vai estabelecer essa relação. chave estrangeira
   category: Category;
 
